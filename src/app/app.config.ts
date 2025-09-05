@@ -12,6 +12,7 @@ import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 import { provideTranslateService, TranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
+import { CookieService } from 'ngx-cookie-service';
 import { initFlowbite } from 'flowbite';
 
 export const appConfig: ApplicationConfig = {
@@ -30,7 +31,8 @@ export const appConfig: ApplicationConfig = {
     }),
     provideAppInitializer(() => {
       const translate = inject(TranslateService);
-      const browserLang = translate.getBrowserLang();
+      const cookie = inject(CookieService);
+      const browserLang = cookie.get('lang') || translate.getBrowserLang();
       translate.addLangs(['es', 'en']);
       translate.setFallbackLang('en');
       translate.use(browserLang || 'en');
