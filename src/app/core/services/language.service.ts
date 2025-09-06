@@ -19,7 +19,7 @@ export class LanguageService {
 
   public currentLang = signal<Language>(this.createLanguage(this.getInitialLang()));
 
-  public availableLangs = computed(() => this.langs().map(this.createLanguage));
+  public availableLangs = computed<Language[]>(() => this.langs().map(this.createLanguage));
 
   private getInitialLang(): string {
     return this.cookies.get('lang') || this.translate.getBrowserLang() || 'en';

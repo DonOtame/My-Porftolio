@@ -10,6 +10,7 @@ import { LanguageService } from '../../core/services/language.service';
 })
 export class LanguageSwitcherComponent {
   private language = inject(LanguageService);
+
   public currentLang = computed(() => this.language.currentLang());
   public availableLangs = computed(() => this.language.availableLangs());
 
