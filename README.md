@@ -1,59 +1,58 @@
-# Portfolio
+# My Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.1.
+## 🇪🇸 Descripción
 
-## Development server
+Este es mi portafolio personal como **Desarrollador Front-End**, construido con **Angular 20** y **TailwindCSS**.  
+Aquí muestro mis proyectos, habilidades y experiencia en la creación de interfaces modernas, optimizadas y totalmente responsivas.
 
-To start a local development server, run:
+El objetivo de este proyecto es tener un portafolio profesional que refleje tanto mi perfil técnico como creativo.
 
-```bash
-ng serve
-```
+## 🇬🇧 Description
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+This is my personal portfolio as a **Front-End Developer**, built with **Angular 20** and **TailwindCSS**.  
+It showcases my projects, skills, and experience in creating modern, optimized, and fully responsive interfaces.
 
-## Code scaffolding
+The goal of this project is to serve as a professional portfolio highlighting both my technical and creative abilities.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 📦 Tecnologías / Technologies
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- **Angular 20** – Framework principal de desarrollo front-end.
+- **TailwindCSS** – Framework de CSS para diseño moderno y responsivo.
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## 🚀 Instalación / Installation
 
-To build the project run:
+1. Clonar el repositorio / Clone the repository:
 
-```bash
-ng build
-```
+   ```bash
+   git clone https://github.com/tu-usuario/my-portfolio.git
+   cd my-portfolio
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+   ```
 
-## Running unit tests
+2. Instalar dependencias / Install dependencies:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+   ```bash
+   npm install
 
-```bash
-ng test
-```
+   ```
 
-## Running end-to-end tests
+3. Ejecutar la aplicación en modo desarrollo / Run the development server:
+   ```bash
+   ng serve
+   Luego abrir http://localhost:4200 en el navegador.
+   ```
 
-For end-to-end (e2e) testing, run:
+## 🖥 Uso / Usage
 
-```bash
-ng e2e
-```
+Navega por las diferentes secciones del portafolio para ver mis proyectos, habilidades y experiencias.
+El diseño es responsive, por lo que se adapta a dispositivos móviles, tabletas y pantallas grandes.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🎨 Diseño / Design
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Diseño limpio y moderno.
+- Layout responsive con TailwindCSS.
+- Animaciones y transiciones sutiles para mejorar la experiencia de usuario.
