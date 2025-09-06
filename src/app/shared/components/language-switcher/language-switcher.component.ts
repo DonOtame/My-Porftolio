@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LanguageService } from '../../core/services/language.service';
+import { LanguageService } from '../../../core/services/language.service';
 
 @Component({
   selector: 'language-switcher',

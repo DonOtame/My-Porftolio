@@ -1,2 +1,12 @@
-<shared-nav-bar />
-<router-outlet />
+<div class="min-h-screen flex flex-row items-center justify-center">
+  <shared-nav-bar class="flex flex-row" />
+
+  @if (isItemActive()) {
+  <main [animate.enter]="'fade-in'" [animate.leave]="'fade-out'" class="flex-1 p-4 mx-auto">
+    <router-outlet />
+  </main>
+
+  }
+</div>
+<matrix-background class="fixed top-0 left-0 w-full h-full -z-10" />
+<language-switcher class="absolute top-4 right-4" />
