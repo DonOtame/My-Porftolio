@@ -5,5 +5,23 @@
     "skills": "Skills",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Hi, I'm",
+    "name": "Danny Cabrera",
+    "intro": "Front-End Developer specialized in Angular, Tailwind, and Flowbite",
+    "subtitle": "I turn ideas into modern, fast, and scalable applications.",
+    "projects": "View Projects",
+    "contact": "Contact Me"
+  },
+  "about": {
+    "description": "I have experience building intuitive and attractive interfaces with Angular and Tailwind, as well as integrating cloud services with AWS:",
+    "options": {
+      "option1": "Efficient deployments with Amplify",
+      "option2": "Secure APIs with API Gateway & Lambda",
+      "option3": "Scalable databases with DynamoDB",
+      "option4": "Modern authentication with Cognito & Amplify"
+    },
+    "objective": "My goal is to combine design, performance, and scalability to create high-impact digital solutions."
   }
 }
