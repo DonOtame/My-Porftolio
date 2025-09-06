@@ -13,6 +13,8 @@
     @for (item of navItems; track $index) {
     <li
       [routerLink]="item.route"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
       class="cursor-pointer flex flex-row items-center relative group"
       [style.transform]="getTranslateX($index)"
       (click)="showRouterOutlet()"

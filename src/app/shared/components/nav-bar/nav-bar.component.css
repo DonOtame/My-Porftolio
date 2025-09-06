@@ -1,3 +1,15 @@
+.active-link a {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.active-link span {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
 .fade-in {
   animation: fadeIn 500ms ease-out;
 }
