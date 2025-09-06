@@ -28,8 +28,8 @@ The goal of this project is to serve as a professional portfolio highlighting bo
 1. Clonar el repositorio / Clone the repository:
 
    ```bash
-   git clone https://github.com/tu-usuario/my-portfolio.git
-   cd my-portfolio
+   git clone https://github.com/DonOtame/My-Portfolio
+   cd My-Portfolio
 
    ```
 
