@@ -15,13 +15,55 @@
     "contact": "Contáctame"
   },
   "about": {
-    "description": "He trabajado construyendo interfaces intuitivas y atractivas con Angular y Tailwind, además de integrar servicios en la nube con AWS:",
-    "options": {
-      "option1": "Despliegues eficientes en Amplify",
-      "option2": "APIs seguras con API Gateway & Lambda",
-      "option3": "Bases de datos escalables con DynamoDB",
-      "option4": "Autenticación moderna con Cognito & Amplify"
+    "title": "Sobre mí",
+    "intro": "Soy <span class='text-lime-500 font-semibold'>Danny Rubén Cabrera Aguilar</span>, <span class='text-lime-500 font-semibold'>Ingeniero de Software</span> y <span class='text-lime-500 font-semibold'>Desarrollador Front-End junior</span> con un año de experiencia creando soluciones web modernas e intuitivas.",
+    "projects": "He trabajado en proyectos como <span class='text-lime-500 font-medium'>epic-test.app</span> y <span class='text-lime-500 font-medium'>surviz.net</span>, desarrollando aplicaciones como <span class='text-lime-500 font-medium'>Clima Laboral</span> y <span class='text-lime-500 font-medium'>Fit Cultural</span>, donde mi enfoque ha sido ofrecer herramientas que permitan <span class='text-lime-500 font-semibold'>visualizar resultados y tomar decisiones relevantes</span> dentro de las organizaciones.",
+    "experience": "Mi experiencia combina <span class='text-lime-500 font-medium'>Angular, Tailwind, Flowbite, JavaScript, TypeScript, HTML, CSS y Chart.js</span>, junto con servicios de AWS como <span class='text-lime-500 font-medium'>Amplify, Cognito, S3, DynamoDB, Lambda y API Gateway</span>.",
+    "passion": "Me apasiona <span class='text-lime-500 font-semibold'>aprender, mejorar continuamente y crear productos de alto impacto</span>, trabajando en equipo y alineando objetivos para lograr <span class='text-lime-500 font-semibold'>soluciones eficientes y efectivas</span>."
+  },
+  "skills": {
+    "title": "Habilidades",
+    "intro": "A lo largo de mi experiencia como Front-End Developer, he adquirido y consolidado habilidades que me permiten crear aplicaciones modernas, eficientes y escalables.",
+    "frontend": {
+      "title": "Frontend",
+      "items": [
+        "<span class='font-semibold text-lime-500'>Angular</span> – Construcción de aplicaciones web dinámicas y robustas",
+        "<span class='font-semibold text-lime-500'>Tailwind CSS & Flowbite</span> – Interfaces rápidas, modernas y responsivas",
+        "<span class='font-semibold text-lime-500'>JavaScript / TypeScript</span> – Desarrollo de lógica y funcionalidades complejas",
+        "<span class='font-semibold text-lime-500'>HTML & CSS</span> – Estructura y estilo de interfaces intuitivas",
+        "<span class='font-semibold text-lime-500'>Chart.js</span> – Visualización de datos de manera interactiva"
+      ]
     },
-    "objective": "Mi objetivo es combinar diseño, rendimiento y escalabilidad para crear soluciones digitales de alto impacto."
+    "cloud": {
+      "title": "Cloud / Backend ligero",
+      "items": [
+        "<span class='font-semibold text-lime-500'>AWS Amplify</span> – Despliegue y gestión de aplicaciones en la nube",
+        "<span class='font-semibold text-lime-500'>Cognito</span> – Autenticación y gestión de usuarios",
+        "<span class='font-semibold text-lime-500'>S3</span> – Almacenamiento seguro y escalable de archivos",
+        "<span class='font-semibold text-lime-500'>DynamoDB</span> – Bases de datos NoSQL eficientes y rápidas",
+        "<span class='font-semibold text-lime-500'>Lambda & API Gateway</span> – Creación de microservicios y endpoints seguros"
+      ]
+    },
+    "other": {
+      "title": "Otras habilidades",
+      "items": [
+        "Resolución de problemas y análisis de requerimientos",
+        "Trabajo en equipo y colaboración"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¡Hablemos! Puedes escribirme o encontrarme en mis redes profesionales:",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/dcabreraaguilar",
+      "github": "https://github.com/DonOtame"
+    },
+    "emailText": "danny_pichincha@hotmail.com",
+    "phone": "+593 96 028 3989",
+    "city": "Quito, Ecuador",
+    "message": "Estoy siempre abierto a nuevos proyectos, colaboraciones y oportunidades de aprendizaje.",
+    "downloadCV": "Descargar CV",
+    "cvFile": "cvs/cv_danny_cabrera_es.pdf"
   }
 }
