@@ -1,5 +1,53 @@
-<img
-  src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjNsMWRqbmM3NWxyM2pseXA2bGozZWZjc3I2dThrejMyNnJyM2Z4ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dHM/WB5lB9KvdAkfSSvKzS/giphy.gif"
-  alt="Work In Progress"
-  class="w-full h-auto"
-/>
+<div
+  [animate.enter]="'fade-in'"
+  [animate.leave]="'fade-out'"
+  class="flex flex-col items-center justify-between w-full text-center md:px-12 lg:px-20 bg-black/90 rounded-2xl p-10 border-2 border-dotted border-lime-500 shadow-lg"
+>
+  <section class="max-w-4xl flex flex-col gap-6 text-left">
+    <h1 class="text-3xl md:text-5xl font-bold text-white">
+      {{ 'skills.title' | translate }}
+    </h1>
+
+    <p class="text-base md:text-lg text-gray-300" [innerHTML]="'skills.intro' | translate"></p>
+
+    <div class="mt-4">
+      <h2 class="text-xl md:text-2xl font-semibold text-lime-500">
+        {{ 'skills.frontend.title' | translate }}
+      </h2>
+      <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+        @for (item of ('skills.frontend.items' | translate); track $index) {
+        <li>
+          <span [innerHTML]="item"></span>
+        </li>
+        }
+      </ul>
+    </div>
+
+    <div class="mt-4">
+      <h2 class="text-xl md:text-2xl font-semibold text-lime-500">
+        {{ 'skills.cloud.title' | translate }}
+      </h2>
+      <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+        @for (item of ('skills.cloud.items' | translate); track $index) {
+
+        <li>
+          <span [innerHTML]="item"></span>
+        </li>
+        }
+      </ul>
+    </div>
+
+    <div class="mt-4">
+      <h2 class="text-xl md:text-2xl font-semibold text-lime-500">
+        {{ 'skills.other.title' | translate }}
+      </h2>
+      <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+        @for (item of ('skills.other.items' | translate); track $index) {
+        <li>
+          <span [innerHTML]="item"></span>
+        </li>
+        }
+      </ul>
+    </div>
+  </section>
+</div>
