@@ -10,7 +10,7 @@ import {
 @Component({
   selector: 'matrix-background',
   imports: [],
-  template: `<canvas #canvas class="w-full h-full"></canvas> `,
+  template: `<canvas #canvas class="w-screen h-screen overflow-hidden"></canvas> `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MatrixComponent implements AfterViewInit {
@@ -18,14 +18,21 @@ export class MatrixComponent implements AfterViewInit {
   private ctx!: CanvasRenderingContext2D;
   private w!: number;
   private h!: number;
-  private cols!: number;
-  private ypos!: number[];
+
+  private text = 'Danny Cabrera - Portfolio Front-End Developer';
+  private textArray = this.text.split('');
+
+  private drops: {
+    angle: number;
+    radius: number;
+    direction: number;
+    textIndex: number; // índice para el texto
+  }[] = [];
 
   ngAfterViewInit() {
     this.ctx = this.canvas.nativeElement.getContext('2d')!;
     this.resizeCanvas();
-    this.ypos = Array(this.cols).fill(0);
-    setInterval(() => this.matrix(), 50);
+    setInterval(() => this.vortexColumns(), 50);
   }
 
   @HostListener('window:resize', [])
@@ -36,24 +43,49 @@ export class MatrixComponent implements AfterViewInit {
   private resizeCanvas() {
     this.w = this.canvas.nativeElement.width = window.innerWidth;
     this.h = this.canvas.nativeElement.height = window.innerHeight;
-    this.cols = Math.floor(this.w / 20) + 1;
-    this.ypos = Array(this.cols).fill(0);
+
+    this.drops = [];
+    const numCols = Math.floor(this.w / 20 / 2);
+
+    for (let i = 0; i < numCols; i++) {
+      const direction = Math.random() < 0.5 ? 1 : -1;
+      const angleRight = Math.random() * Math.PI * 2;
+      const radius = 150 + i * 20;
+
+      const textIndex = Math.floor(Math.random() * this.textArray.length);
+
+      this.drops.push({ angle: angleRight, radius, direction, textIndex });
+
+      this.drops.push({ angle: angleRight + Math.PI, radius, direction, textIndex });
+
+      this.drops.push({ angle: angleRight + Math.PI / 2, radius, direction, textIndex });
+
+      this.drops.push({ angle: angleRight - Math.PI / 2, radius, direction, textIndex });
+    }
   }
 
-  private matrix() {
+  private vortexColumns() {
     const ctx = this.ctx;
-    ctx.fillStyle = '#0001';
+    ctx.fillStyle = 'rgba(0,0,0,0.2)';
     ctx.fillRect(0, 0, this.w, this.h);
 
-    ctx.fillStyle = '#0f0';
     ctx.font = '15pt monospace';
 
-    this.ypos.forEach((y, ind) => {
-      const text = String.fromCharCode(Math.random() * 128);
-      const x = ind * 20;
-      ctx.fillText(text, x, y);
-      if (y > 100 + Math.random() * 10000) this.ypos[ind] = 0;
-      else this.ypos[ind] = y + 20;
+    const centerX = this.w / 2;
+    const centerY = this.h / 2;
+
+    this.drops.forEach((drop) => {
+      const x = centerX + drop.radius * Math.cos(drop.angle);
+      const y = centerY + drop.radius * Math.sin(drop.angle);
+
+      const char = this.textArray[drop.textIndex];
+      ctx.fillStyle = '#0f0';
+      ctx.fillText(char, x, y);
+
+      drop.angle += 0.05 * drop.direction;
+
+      // siguiente letra del texto
+      drop.textIndex = (drop.textIndex + 1) % this.textArray.length;
     });
   }
 }
