@@ -1,5 +1,76 @@
-<img
-  src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjNsMWRqbmM3NWxyM2pseXA2bGozZWZjc3I2dThrejMyNnJyM2Z4ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dHM/WB5lB9KvdAkfSSvKzS/giphy.gif"
-  alt="Work In Progress"
-  class="w-full h-auto"
-/>
+<div
+  [animate.enter]="'fade-in'"
+  [animate.leave]="'fade-out'"
+  class="flex flex-col items-center justify-center w-full text-center md:px-12 lg:px-20 bg-black/90 rounded-2xl p-10 border-2 border-dotted border-lime-500 shadow-lg"
+>
+  <section class="max-w-4xl flex flex-col gap-6 text-center">
+    <!-- Título -->
+    <h1 class="text-3xl md:text-5xl font-bold text-white">
+      {{ 'contact.title' | translate }}
+    </h1>
+
+    <!-- Subtítulo -->
+    <p class="text-base md:text-lg text-gray-300">
+      {{ 'contact.subtitle' | translate }}
+    </p>
+
+    <!-- Iconos de redes -->
+    <div class="flex justify-center gap-8 mt-4">
+      <!-- LinkedIn -->
+      <a
+        [href]="'contact.links.linkedin' | translate"
+        target="_blank"
+        class="text-lime-500 hover:text-white transition-colors duration-300"
+        aria-label="LinkedIn"
+      >
+        <ng-icon name="bootstrapLinkedin" size="40"></ng-icon>
+      </a>
+
+      <!-- GitHub -->
+      <a
+        [href]="'contact.links.github' | translate"
+        target="_blank"
+        class="text-lime-500 hover:text-white transition-colors duration-300"
+        aria-label="GitHub"
+      >
+        <ng-icon name="bootstrapGithub" size="40"></ng-icon>
+      </a>
+    </div>
+
+    <div class="mt-6 text-gray-300 space-y-2">
+      <p>
+        <span class="font-semibold text-lime-500">Email:</span>
+        {{ 'contact.emailText' | translate }}
+
+        <button (click)="copyEmail('contact.emailText')" class="cursor-pointer hover:text-lime-400">
+          <ng-icon
+            name="bootstrapClipboard2"
+            size="15"
+            class="text-center justify-baseline"
+          ></ng-icon>
+        </button>
+      </p>
+
+      <p>
+        <span class="font-semibold text-lime-500">Teléfono:</span>
+        {{ 'contact.phone' | translate }}
+      </p>
+      <p>
+        <span class="font-semibold text-lime-500">Ubicación:</span>
+        {{ 'contact.city' | translate }}
+      </p>
+    </div>
+
+    <p class="mt-6 text-gray-300 italic">"{{ 'contact.message' | translate }}"</p>
+
+    <div class="mt-4">
+      <a
+        [href]="'contact.cvFile' | translate"
+        target="_blank"
+        class="inline-block px-6 py-3 bg-lime-500 text-black font-semibold rounded-lg hover:bg-lime-600 transition-colors duration-300"
+      >
+        {{ 'contact.downloadCV' | translate }}
+      </a>
+    </div>
+  </section>
+</div>
